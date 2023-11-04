@@ -6,6 +6,8 @@ on:
       - "Test Build"
     types:
       - "completed"
+  workflow_dispatch:
+      ["main"]
 
 jobs:
   test-deploy:
