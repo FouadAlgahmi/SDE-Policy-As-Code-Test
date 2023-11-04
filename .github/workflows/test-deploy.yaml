@@ -2,7 +2,7 @@ name: Test Deploy
 
 on:
   workflow_run:
-    workflows: ["Build"]
+    workflows: ["Test Build"]
     types:
       - completed
   workflow_dispatch:
