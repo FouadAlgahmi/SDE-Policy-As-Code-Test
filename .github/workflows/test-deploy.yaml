@@ -1,0 +1,25 @@
+name: Test Deploy
+
+on:
+  workflow_run:
+    workflows:
+      - "Test Build"
+    types:
+      - "completed"
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        run: |
+
+          echo "Deploying to GitHub Pages..."
+          npm install -g gh-pages
+          npm run build
+          npx gh-pages -d build
