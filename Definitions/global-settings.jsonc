@@ -3,7 +3,7 @@
     "pacOwnerId": "1234567890",
     "pacEnvironments": [
         {
-            "pacSelector": "SUB-CORP-SDEPAC",
+            "pacSelector": "testing-selector",
             "cloud": "AzureCloud",
             "tenantId": "54cd337e-4410-429f-8ae9-bd3f51932cfb",
             "deploymentRootScope": "/subscriptions/cc01580b-8afb-4eec-bb77-66e02dfd7578",
