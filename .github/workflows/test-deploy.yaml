@@ -14,4 +14,5 @@ jobs:
     with:
       environment: "dev"
       pac-selector-dev: "testing-selector"
-      
+      run_id: context.payload.workflow_run.id
+
