@@ -1,25 +1,17 @@
-# name: Test Deploy
+name: Test Deploy
 
-# on:
-#   workflow_run:
-#     workflows: ["Test Build"]
-#     types:
-#       - completed
-#   workflow_dispatch:
+on:
+  workflow_run:
+    workflows: ["Test Build"]
+    types:
+      - completed
+  workflow_dispatch:
 
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v2
-
-#       - name: Deploy to GitHub Pages
-#         uses: JamesIves/github-pages-deploy-action@4.2.0
-#         with:
-#           branch: gh-pages
-#           folder: website
-
-#       - name: Display Deploy Output
-#         run: echo "Website deployed successfully!"
+jobs:
+  test-deploy:
+    uses: FouadAlgahmi/SDE-Security-Azure-PaC/.github/workflows/pac-pipline-deploy.yaml@main
+    secrets: inherit
+    with:
+      environment: "dev"
+      pac-selector-dev: "testing-selector"
+      
